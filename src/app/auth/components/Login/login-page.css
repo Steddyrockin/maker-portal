@@ -1,0 +1,128 @@
+@font-face {
+  font-family: "Recoleta";
+  src: url("/fonts/Recoleta-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Vulf Sans Demo";
+  src: url("/fonts/VulfSansDemo-Regular.otf");
+}
+
+.login-page {
+  padding: 44px;
+}
+
+.login-page .header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.login-page .external-link {
+  font-family: "Recoleta";
+  color: white;
+}
+
+.login-page .footer {
+  position: fixed;
+  bottom: 44px;
+  width: calc(100% - 40px);
+  display: flex;
+  justify-content: center;
+}
+
+.login-page .portal-logo {
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.login-page .login-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-page .login-button {
+  color: white;
+  text-align: center;
+  padding-bottom: 10px;
+  width: 187px;
+  background-color: inherit;
+  border-bottom: 1px solid rgba(240, 230, 129, 0.3);
+  font-family: "Vulf Sans Demo", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16.8px;
+  cursor: pointer;
+}
+
+.login-page .login-button:hover {
+  border-bottom: 1px solid rgba(240, 230, 129, 1);
+}
+
+.login-page .portal-logo-text {
+  justify-content: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: "Vulf Sans Demo", "Arial Narrow", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.2px;
+  letter-spacing: 2%;
+}
+
+.login-page .portal-logo-text .title {
+  font-family: "Recoleta";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.login-page .portal-logo img {
+  max-width: 473px;
+  max-height: 473px;
+}
+
+.password-input {
+  margin-top: 10px;
+}
+.submit-button {
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 640px) {
+  .login-page {
+    padding: 44px 15px 20px;
+  }
+  .logged-in {
+    border-bottom: 1px solid rgba(204, 183, 131, 0.3);
+  }
+  .login-page .portal-logo img {
+    max-width: 213px;
+    max-height: 213px;
+  }
+  .login-page .portal-logo {
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50%);
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .login-page .portal-logo img {
+    max-width: 273px;
+    max-height: 273px;
+  }
+  .login-page .portal-logo-text .title {
+    font-size: 30px;
+  }
+}
