@@ -6,6 +6,7 @@ export enum RoutesEnum {
 	RESETPASSWORD = '/reset-password',
 	LOGOUT = '/logout',
 	HOME = '/',
+	ORDERS = '/orders',
 	EXAMPLE = '/example',
 	EXTERNALUSER = '/external-user',
 }

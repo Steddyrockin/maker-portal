@@ -1,5 +1,5 @@
 import React, { useState, ChangeEvent } from "react";
-// import isEmail from "../../../../../core/utils/isEmail";
+// import isEmail from "core/utils/isEmail";
 import "./email-input.css";
 
 interface EmailInputProps {

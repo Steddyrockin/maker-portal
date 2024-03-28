@@ -1,27 +1,23 @@
 import { Box } from "@mui/material";
-import { FC, useState, useEffect } from "react";
+import { FC, useEffect } from "react";
 
-import logo from "../../../../../assets/logo.svg";
+import logo from "assets/logo.svg";
 import CloseButton from "../CloseButton";
 import FooterNote from "../FooterNote";
-import { data } from "../../../../../shared/data";
-import { ExternalLinksEnum } from "../../../../../shared/enums";
+import { ExternalLinksEnum } from "shared/enums";
+import { DataItem } from "shared/data/drawerListItems";
 
 interface DrawerBoxProps {
   toggleDrawer: (arg: boolean) => void;
+  items: DataItem[];
 }
 
-const DrawerBox: FC<DrawerBoxProps> = ({ toggleDrawer }) => {
+const DrawerBox: FC<DrawerBoxProps> = ({ toggleDrawer, items }) => {
   const activeIndex = 0;
-  const [loggedIn, setLoggedIn] = useState<boolean>(false);
   useEffect(() => {
     const data = localStorage.getItem("loggedIn");
     console.log("localstorage data", !!data);
-    
-    !!data? setLoggedIn(true):setLoggedIn(false);
   }, []);
-
-  const itemsToRender = loggedIn ? data.items : [data.items[2]];
 
   return (
     <Box
@@ -47,7 +43,7 @@ const DrawerBox: FC<DrawerBoxProps> = ({ toggleDrawer }) => {
         <CloseButton onClick={() => toggleDrawer(false)} />
       </Box>
       <Box sx={{ paddingTop: "15px" }}>
-        {itemsToRender.map((item, index) => (
+        {items.map((item, index) => (
           <Box key={index} sx={{ display: "flex", alignItems: "center" }}>
             <img src={item.icon} alt={item.title} />
             <a

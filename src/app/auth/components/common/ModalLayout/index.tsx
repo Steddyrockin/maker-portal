@@ -2,7 +2,7 @@ import { FC, ReactNode } from "react";
 import { Box } from "@mui/material";
 import "./layout.css";
 import CloseButton from "../CloseButton";
-import portalImage from '../../../../../assets/aura.gif';
+import portalImage from 'assets/aura.gif';
 
 interface ModalLayoutProps {
   children: ReactNode;

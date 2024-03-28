@@ -1,18 +1,13 @@
-@font-face {
-  font-family: "Recoleta";
-  src: url("/fonts/Recoleta-Bold.ttf");
-}
-
-@font-face {
-  font-family: "Vulf Sans Demo";
-  src: url("/fonts/VulfSansDemo-Regular.otf");
-}
-
 .login-page {
-  padding: 44px;
+  padding: 0;
+}
+
+.logged-in {
+  border-bottom: 1px solid rgba(204, 183, 131, 0.3);
 }
 
 .login-page .header {
+  padding: 44px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -22,6 +17,14 @@
 .login-page .external-link {
   font-family: "Recoleta";
   color: white;
+}
+
+.login-page .nav-link {
+  font-family: var(--font-primary);
+  font-weight: var(--font-weight-regular);
+  font-size: var(--text-base-size);
+  line-height: var(--line-height-2);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .login-page .footer {
@@ -99,12 +102,10 @@
 }
 
 @media screen and (max-width: 640px) {
-  .login-page {
+  .login-page .header {
     padding: 44px 15px 20px;
   }
-  .logged-in {
-    border-bottom: 1px solid rgba(204, 183, 131, 0.3);
-  }
+
   .login-page .portal-logo img {
     max-width: 213px;
     max-height: 213px;

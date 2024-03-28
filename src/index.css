@@ -1,4 +1,35 @@
+@font-face {
+  font-family: "Recoleta";
+  src: url("/fonts/Recoleta-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Vulf Sans Demo";
+  src: url("/fonts/VulfSansDemo-Regular.otf");
+}
+
 :root {
+  /*font family*/
+  --font-primary: "Vulf Sans Demo";
+  --font-secondary: "Recoleta";
+
+  /*font size*/
+  --text-base-size: 12px;
+  --text-body-size: 14px;
+  --text-medium-size: 16px;
+  --text-big-size: 18px; 
+
+  /*font weight*/
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold:600;
+  --font-weight-bold:700;
+
+  /*line height*/
+  --line-height-2: 18px;
+  --line-height-3: 19.2px;
+  --line-height-4: 44px;
+
   font-family: "Vulf Mono Demo";
   line-height: 1.5;
   font-weight: 400;
@@ -18,6 +49,8 @@
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 }
+
+
 
 a {
   font-weight: 500;

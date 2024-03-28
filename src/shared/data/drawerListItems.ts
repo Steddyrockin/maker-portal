@@ -1,14 +1,30 @@
 import { ExternalLinksEnum } from "../enums";
-import bagIcon from "../../assets/bag-icon.svg";
-import productsIcon from "../../assets/products-icon.svg";
-import collectiveIcon from "../../assets/collective-icon.svg";
+import bagIcon from "assets/bag-icon.svg";
+import productsIcon from "assets/products-icon.svg";
+import collectiveIcon from "assets/collective-icon.svg";
+import dollar from "assets/$.svg";
 
-export const data = {
+export interface DataItem {
+  title: string;
+  url: string;
+  icon: string;
+}
+
+export interface Data {
+  items: DataItem[];
+}
+
+export const data: Data = {
   items: [
     {
       title: "Orders",
       url: "#",
       icon: bagIcon,
+    },
+    {
+      title: "Business Details",
+      url: "#",
+      icon: dollar,
     },
     {
       title: "Products",
@@ -20,9 +36,5 @@ export const data = {
       url: ExternalLinksEnum.COLLECTIVE,
       icon: collectiveIcon,
     },
-    // {
-    //   title: "Settings",
-    //   url: ExternalLinksEnum.REQUESTACCESS,
-    // },
   ],
 };
