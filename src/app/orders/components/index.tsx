@@ -1,8 +1,8 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import OrderList from "./OrdersList";
 import ShippingInfo from "./ShippingInfo";
 import OrderDetail from "./OrderDetail";
-import { Box } from "@mui/material";
+import { Stack } from "@mui/material";
 
 import {
   ordersData,
@@ -13,14 +13,25 @@ import {
 import SearchBox from "./common/SearchBox";
 
 const Orders: FC = () => {
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = (newOpen: boolean) => () => {
+    console.log("Toggle drawer open close status", newOpen);
+    setDrawerOpen(newOpen);
+  };
+
+  const handleCloseDrawer = (status: boolean) => {
+    console.log("draw", status);
+    setDrawerOpen(status);
+  };
   return (
-    <Box sx={{ padding: "0 15px" }}>
+    <Stack direction="column" spacing="15px" sx={{ padding: "0 15px" }}>
       <OrderList data={ordersData}>
         <SearchBox />
       </OrderList>
       <ShippingInfo />
-      <OrderDetail />
-    </Box>
+      <OrderDetail drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} handleCloseDrawer={handleCloseDrawer} />
+    </Stack>
   );
 };
 
